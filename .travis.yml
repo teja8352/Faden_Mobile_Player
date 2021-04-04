@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-  — "14.15.1"
+  - "14.15.1"
 branches:
   only:
-  — master
+  - master
 before_script:
-  — npm install -g ionic
-  — npm install -g cordova
-  — npm ci
+- npm install -g ionic
+- npm install -g cordova
+- npm ci
 script:
-  — ionic build --prod -- --base-href ./
-  - ionic cordova build android
+- ionic build --prod -- --base-href ./
+- ionic cordova build android
 after_success:
-  - ls ikaee/Faden_Mobile_Player/platforms/android/bin
-  - echo "build succeeded."
+- ls ikaee/Faden_Mobile_Player/platforms/android/bin
+- echo "build succeeded."
