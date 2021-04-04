@@ -6,14 +6,11 @@ branches:
   — master
 before_script:
   — npm install -g ionic
+  — npm install -g cordova
   — npm ci
 script:
   — ionic build --prod -- --base-href ./
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: master
-  local_dir: www
+  - ionic cordova build android
+after_success:
+  - ls ikaee/Faden_Mobile_Player/platforms/android/bin
+  - echo "build succeeded."

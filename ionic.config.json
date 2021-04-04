@@ -1,5 +1,7 @@
 {
   "name": "Faden_Mobile_Player",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
