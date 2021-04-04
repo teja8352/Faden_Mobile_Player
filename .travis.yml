@@ -34,7 +34,9 @@ before_script:
   - export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2
 
 script:
-  - cd ikaee/Faden_Mobile_Player
+  - java --version
+  - echo $PATH
+  - cd /home/travis/build/ikaee/Faden_Mobile_Player/Faden_Mobile_Player
   - ionic cordova build android
 after_success:
   - ls ikaee/Faden_Mobile_Player/platforms/android/bin
