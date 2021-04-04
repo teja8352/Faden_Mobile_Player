@@ -10,7 +10,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-      - openjdk-8-jdk
+      - openjdk-11-jdk
       - lib32stdc++6
       - lib32z1
 env:
@@ -36,7 +36,7 @@ before_script:
 script:
   - java --version
   - echo $PATH
-  - cd /home/travis/build/ikaee/Faden_Mobile_Player/Faden_Mobile_Player
+  - cd /home/travis/build/ikaee/Faden_Mobile_Player/
   - ionic cordova build android
 after_success:
-  - ls ikaee/Faden_Mobile_Player/platforms/android/bin
+  - ls /home/travis/build/ikaee/Faden_Mobile_Player/platforms/android/bin
