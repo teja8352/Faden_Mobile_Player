@@ -13,6 +13,8 @@ addons:
       - openjdk-8-jdk
       - lib32stdc++6
       - lib32z1
+jdk: openjdk8
+
 env:
   CXX=g++-4.8
 
