@@ -13,10 +13,12 @@ addons:
       - openjdk-8-jdk
       - lib32stdc++6
       - lib32z1
-jdk: openjdk8
 
 env:
-  CXX=g++-4.8
+  - JDK=oraclejdk8
+  - JDK=openjdk8
+  - CXX=g++-4.8
+dist: trusty
 
 install:
   - npm install -g gulp bower cordova ionic
@@ -24,10 +26,7 @@ install:
   - bower update
 
 before_script:
-  - sudo add-apt-repository ppa:openjdk-r/ppa
-  - sudo apt-get -qq update
-  - sudo apt-get install -y openjdk-8-jdk
-  - sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+  - jdk_switcher use $JDK
   - wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
   - tar -xvf android-sdk_r24.4-linux.tgz
   - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter platform-tools
