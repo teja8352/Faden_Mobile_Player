@@ -24,8 +24,6 @@ install:
   - bower update
 
 before_script:
-  - export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-  - export PATH=${PATH}:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/db/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin
   - sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java" 0
   - sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/javac" 0
   - sudo update-alternatives --set java /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java
@@ -38,6 +36,8 @@ before_script:
   - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-support
   - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-m2repository
   - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-google-m2repository
+  - export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+  - export PATH=${PATH}:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/db/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin
   - export ANDROID_HOME=$PWD/android-sdk-linux
   - export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2
 
