@@ -38,6 +38,8 @@ before_script:
   - export PATH=${PATH}:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/db/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin
   - export ANDROID_HOME=$PWD/android-sdk-linux
   - export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2:${PATH}
+  - echo $JAVA_HOME
+  - echo $PATH
 
 script:
   - java -version
