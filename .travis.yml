@@ -24,6 +24,7 @@ install:
   - bower update
 
 before_script:
+  - ls /usr/lib/jvm/
   - sudo rm -r /usr/lib/jvm/java-11-oracle
   - export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
   - export PATH=${PATH}:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/db/bin:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin
