@@ -3,7 +3,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: busybox
+    repository: beevelop/ionic:latest
+    tag: latest
 
 inputs:
   - name: source
