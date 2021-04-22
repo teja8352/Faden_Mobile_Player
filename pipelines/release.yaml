@@ -3,7 +3,7 @@ resources:
     type: git
     icon: github
     source:
-      uri: git@github.com:ikaee/Faden_Mobile_Player.git
+      uri: https://github.com/ikaee/Faden_Mobile_Player.git
       branch: master
 
 jobs:
@@ -13,6 +13,6 @@ jobs:
         trigger: true
 
       - task: build-android
-        file: source-code/ci/pipelines/tasks/build-android.yaml
+        file: source-code/pipelines/tasks/build-android.yaml
         input_mapping:
           source: source-code
