@@ -9,4 +9,4 @@ inputs:
   - name: source
 
 run:
-  path: source/ci/pipelines/tasks/scripts/build-android.sh
+  path: source/pipelines/tasks/scripts/build-android.sh
