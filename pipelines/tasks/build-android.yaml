@@ -6,8 +6,7 @@ image_resource:
     email: arshad.ali.sayed.15@gmail.com
     username: arshadalis
     password: ifafa15@docker
-    repository: ubuntu
-      tag: 14.04
+    repository: ubuntu:14.04
 
 inputs:
   - name: source
