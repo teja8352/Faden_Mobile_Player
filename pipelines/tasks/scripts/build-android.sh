@@ -4,8 +4,12 @@ set -ex
 
 cd source
 
+ls -l
+
+node -v
+
 java -version
 
-cordova build --android
+
 
 echo "Welcome to the world of Operations."

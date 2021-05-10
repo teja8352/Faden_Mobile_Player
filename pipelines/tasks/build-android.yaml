@@ -6,7 +6,7 @@ image_resource:
     email: arshad.ali.sayed.15@gmail.com
     username: arshadalis
     password: ifafa15@docker
-    repository: vgaidarji/docker-android-cordova
+    repository: timbru31/java-node:8-jdk-14
 
 inputs:
   - name: source
