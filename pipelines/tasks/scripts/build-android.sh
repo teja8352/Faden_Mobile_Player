@@ -8,8 +8,8 @@ node -v
 
 java -version
 
-npm init -y
-npm install --silent
+
+npm install -y
 
 
 ionic cordova platform add android
