@@ -9,8 +9,9 @@ node -v
 java -version
 
 
-npm install -y
-
+echo n | npm install
+npm i -g ionic
+npm i -g cordova
 
 ionic cordova platform add android
 ionic cordova build android --prod --aot --release
