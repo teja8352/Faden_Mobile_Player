@@ -4,23 +4,26 @@ set -ex
 
 cd source
 
-node -v
-
-java -version
-
+export APP_HOME=$PWD
 
 echo n | npm install
 npm i -g ionic
 npm i -g cordova
 
-echo y | apt update && apt install android-sdk
+apt update
+echo Y | apt install android-sdk
 
 export ANDROID_HOME=/usr/lib/android-sdk/
-PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+cd $ANDROID_HOME
+curl --output sdk-tools-linux.zip https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+echo -ne "y" | unzip sdk-tools-linux.zip
+echo -ne "y" | ./tools/bin/sdkmanager --install 'build-tools;29.0.2' 'platform-tools' 'platforms;android-29' 'tools'
+
 ionic cordova platform add android
-ionic cordova build android --prod --aot --release
+echo n | ionic cordova build android --prod --aot --release
 keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
 zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
