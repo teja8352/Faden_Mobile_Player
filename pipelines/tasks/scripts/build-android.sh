@@ -22,6 +22,8 @@ curl --output sdk-tools-linux.zip https://dl.google.com/android/repository/sdk-t
 echo -ne "y" | unzip sdk-tools-linux.zip
 echo -ne "y" | ./tools/bin/sdkmanager --install 'build-tools;29.0.2' 'platform-tools' 'platforms;android-29' 'tools'
 
+cd $APP_HOME
+
 ionic cordova platform add android
 echo n | ionic cordova build android --prod --aot --release
 keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
