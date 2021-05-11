@@ -8,7 +8,7 @@ node -v
 
 java -version
 
-
+npm init -y
 npm install --silent
 
 
