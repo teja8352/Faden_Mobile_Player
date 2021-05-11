@@ -9,7 +9,7 @@ node -v
 java -version
 
 
-npm install
+npm install --silent
 
 
 ionic cordova platform add android
