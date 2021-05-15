@@ -1,4 +1,4 @@
-FROM timbru31/java-node
+FROM timbru31/java-node:8-jdk-14
 
 WORKDIR /root/code
 
