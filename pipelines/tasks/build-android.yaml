@@ -6,8 +6,8 @@ image_resource:
     email: arshad.ali.sayed.15@gmail.com
     username: arshadalis
     password: ifafa15@docker
-    repository: timbru31/java-node
-    tag: 8-jdk-14
+    repository: arshadalis/node-java-android
+    tag: latest
 
 inputs:
   - name: source
