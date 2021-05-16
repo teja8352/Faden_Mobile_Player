@@ -4,8 +4,6 @@ set -ex
 cd source
 
 echo n | npm install
-npm i -g ionic
-npm i -g cordova
 
 ionic cordova platform add android
 echo n | ionic cordova build android --prod --aot --release
