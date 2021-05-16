@@ -16,3 +16,5 @@ RUN curl --output sdk-tools-linux.zip https://dl.google.com/android/repository/s
 RUN echo  y | unzip sdk-tools-linux.zip
 RUN echo  y | ./tools/bin/sdkmanager --install 'build-tools;29.0.2' 'platform-tools' 'platforms;android-29' 'tools'
 RUN yes | ./tools/bin/sdkmanager --licenses
+
+RUN echo 'image created'
