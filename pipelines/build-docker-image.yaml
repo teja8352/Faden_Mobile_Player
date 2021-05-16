@@ -1,0 +1,25 @@
+resources:
+  - name: source-code
+    type: git
+    icon: github
+    source:
+      uri: https://github.com/ikaee/Faden_Mobile_Player.git
+      branch: concourse
+
+  - name: node-java-android
+    type: docker-image
+    source:
+      email: arshad.ali.sayed.15@gmail.com
+      username: arshadalis
+      password: ifafa15@docker
+      repository: arshadalis/node-java-android
+
+jobs:
+  - name: publish
+    public: true
+    serial: true
+    plan:
+      - get: source-code
+      - put: node-java-android
+        params:
+          build: source-code
