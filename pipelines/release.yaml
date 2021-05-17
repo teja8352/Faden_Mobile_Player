@@ -10,7 +10,7 @@ jobs:
   - name: build
     plan:
       - get: source-code
-        trigger: true
+        trigger: false
 
       - task: build-android
         file: source-code/pipelines/tasks/build-android.yaml

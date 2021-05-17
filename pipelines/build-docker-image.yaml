@@ -20,6 +20,8 @@ jobs:
     serial: true
     plan:
       - get: source-code
+        trigger: true
+
       - put: node-java-android
         params:
           build: source-code
