@@ -12,5 +12,8 @@ image_resource:
 inputs:
   - name: source
 
+outputs:
+  - name: output
+
 run:
   path: source/pipelines/tasks/scripts/build-android.sh
