@@ -16,3 +16,8 @@ jobs:
         file: source-code/pipelines/tasks/build-android.yaml
         input_mapping:
           source: source-code
+
+      - task: upload-to-drive
+        file: source-code/pipelines/tasks/upload-to-drive.yaml
+        input_mapping:
+          source: output

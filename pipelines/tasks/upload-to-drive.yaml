@@ -1,0 +1,16 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    email: arshad.ali.sayed.15@gmail.com
+    username: arshadalis
+    password: ifafa15@docker
+    repository: byrnedo/alpine-curl
+    tag: latest
+
+inputs:
+  - name: source
+
+run:
+  path: source/pipelines/tasks/scripts/upload.sh
