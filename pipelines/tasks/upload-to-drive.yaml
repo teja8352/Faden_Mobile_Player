@@ -11,6 +11,7 @@ image_resource:
 
 inputs:
   - name: source
+  - name: folder
 
 run:
   path: source/pipelines/tasks/scripts/upload.sh

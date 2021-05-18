@@ -20,4 +20,5 @@ jobs:
       - task: upload-to-drive
         file: source-code/pipelines/tasks/upload-to-drive.yaml
         input_mapping:
-          source: output
+          source: source-code
+          folder: output
