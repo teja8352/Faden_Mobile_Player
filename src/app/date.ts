@@ -1,1 +1,1 @@
-export const START_DATE = "123456y"
+export const FROM_DATE = "2021-05-20T06:48:29.272+05:30";export const TO_DATE = "2021-12-20T06:48:29.278+05:30";export const CLIENT = "Helloi";
